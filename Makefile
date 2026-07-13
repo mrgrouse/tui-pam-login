@@ -1,7 +1,7 @@
 
-CC = clang
+CC = gcc
 
-CFLAGS = -Os
+CFLAGS = -Os -Werror -Wall -Wextra
 
 LDFLAGS = -lform -lncursesw
 #LDFLAGS=-fPIE -static # for static linking with [sabotage-linux/netbsd-curses]
