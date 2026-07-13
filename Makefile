@@ -2,7 +2,7 @@
 CC = gcc
 
 CFLAGS = -O2 -Werror -Wall -Wextra
-#CFLAGS = -O0 -Werror -Wall -Wextra -g # debug
+DEBUG_CFLAGS = -O0 -Werror -Wall -Wextra -g
 
 LDFLAGS = -lform -lncursesw
 #LDFLAGS=-fPIE -static # for static linking with [sabotage-linux/netbsd-curses]
@@ -18,6 +18,9 @@ BIN=tpl
 
 tpl: .o
 	$(CC) $(CFLAGS) $(OBJS) -o $(BIN) $(LDFLAGS)
+
+debug:
+	$(CC) $(DEBUG_CFLAGS) $(SRCS) -o $(BIN) $(LDFLAGS)
 
 clean:
 	rm -f $(BIN) $(OBJS)
