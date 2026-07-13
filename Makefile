@@ -1,7 +1,8 @@
 
 CC = gcc
 
-CFLAGS = -Os -Werror -Wall -Wextra
+CFLAGS = -O2 -Werror -Wall -Wextra
+#CFLAGS = -O0 -Werror -Wall -Wextra -g # debug
 
 LDFLAGS = -lform -lncursesw
 #LDFLAGS=-fPIE -static # for static linking with [sabotage-linux/netbsd-curses]
