@@ -1,5 +1,5 @@
 
-CC = gcc
+CC = clang
 
 CFLAGS = -O2 -Werror -Wall -Wextra
 DEBUG_CFLAGS = -O0 -Werror -Wall -Wextra -g
@@ -12,7 +12,7 @@ SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 
 
-BIN=tpl
+BIN=tuilogin
 .o:
 	$(CC) $(CFLAGS) -c $(SRCS)
 
